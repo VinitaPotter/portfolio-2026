@@ -1,0 +1,17 @@
+.layout-container {
+    @apply w-full mx-auto px-6 md:px-12 box-border;
+    max-width: 1200px;
+    /* 1000px - generous max width */
+}
+
+/* Desktop Adjustment for Sidebar */
+@media (min-width: 1024px) {
+    .layout-container {
+        /* Sidebar is 8rem (w-32). We want padding-left to be sidebar + gutter.
+           Navbar uses p-12 (3rem). So we match that gutter.
+           Total padding-left = 8rem + 3rem = 11rem */
+        padding-left: 11rem;
+        padding-right: 3rem;
+        /* Match spacing */
+    }
+}

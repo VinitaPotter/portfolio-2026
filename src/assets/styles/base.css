@@ -1,0 +1,18 @@
+@import './variables.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: theme('colors.charcoal');
+    color: theme('colors.off-white');
+    font-family: theme('fontFamily.sans');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+    background-color: theme('colors.celadon');
+    color: theme('colors.charcoal');
+}
