@@ -4,15 +4,15 @@ import { projects } from '@/data/projects.js'
 </script>
 
 <template>
-  <section id="work" class="py-32 layout-container">
+  <section id="work" class="py-16 layout-container">
     <!-- Header -->
     <div class="mb-24">
       <div class="flex items-center gap-4 mb-4">
-        <span class="text-xs font-medium tracking-[0.2em] text-celadon uppercase">Some things I’ve built</span>
-        <div class="h-px w-32 bg-white/10"></div>
+        <span class="text-xs md:text-sm font-medium tracking-[0.2em] text-celadon uppercase">Some things I’ve built</span>
+        <div class="h-px w-32 bg-celadon"></div>
       </div>
       
-      <h2 class="text-4xl md:text-6xl font-bold text-off-white mb-8">my work</h2>
+      <h2 class="text-3xl font-bold text-off-white mb-8">My projects</h2>
       
       <p class="text-lg md:text-xl text-soft-gray font-light max-w-3xl leading-relaxed">
         These are personal projects built out of curiosity and a desire to go deeper into frontend systems. I use them to explore ideas, experiment with patterns, and better understand how complex interfaces behave at scale. Each project focuses on learning, clarity, and thoughtful implementation rather than polish for its own sake.

@@ -3,9 +3,19 @@ import { experience } from '@/data/experience.js'
 </script>
 
 <template>
-  <section id="experience" class="py-32 layout-container">
-    <h2 class="text-3xl font-bold text-off-white mb-16">Experience</h2>
+  <section id="experience" class="py-16 layout-container">
+    <div class="mb-16">
+      <div class="flex items-center gap-4 mb-4">
+        <span class="text-xs md:text-sm font-medium tracking-[0.2em] text-celadon uppercase">Where I've worked</span>
+        <div class="h-px w-32 bg-celadon"></div>
+      </div>
+      <h2 class="text-3xl font-bold text-off-white mb-8">Experience</h2>
+         <p class="text-lg md:text-xl text-soft-gray font-light max-w-3xl leading-relaxed mb-24">
+      I started my career in business development, working closely with people, clients, and teams for several years. Through that work, I was gradually exposed to programming, which led to focused self-study and a deliberate transition into software engineering. That background still shapes how I work today, especially in how I approach problem-solving, communication, and long-term thinking when building complex systems.</p>
     
+    </div>
+
+ 
     <div class="space-y-24">
       <div v-for="(item, index) in experience" :key="index" class="relative group">
         <!-- Visual connector line for timeline effect (subtle) -->

@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { scrollToSection } from '@/utils/scrollToSection'
 
 const navLinks = [
@@ -10,6 +10,7 @@ const navLinks = [
 
 const isDark = ref(true)
 const isMenuOpen = ref(false)
+const isScrolled = ref(false)
 
 const toggleTheme = () => {
   isDark.value = !isDark.value
@@ -38,22 +39,40 @@ const handleScroll = (id) => {
   }
 }
 
+const updateScroll = () => {
+  isScrolled.value = window.scrollY > 0
+}
+
 onMounted(() => {
   const savedTheme = localStorage.getItem('theme')
   if (savedTheme === 'light') {
     isDark.value = false
     document.documentElement.classList.add('light-theme')
   }
+  
+  window.addEventListener('scroll', updateScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateScroll)
 })
 </script>
 
 <template>
-  <nav class="fixed top-0 left-0 w-full z-50 pointer-events-none">
-    <div class="w-full h-full p-6 md:p-12 flex justify-between items-center">
+  <nav 
+    class="fixed top-0 left-0 w-full z-50 pointer-events-none transition-all duration-300"
+    :class="[isScrolled ? 'bg-charcoal/80 backdrop-blur-md shadow-sm' : 'bg-transparent']"
+  >
+    <div class="w-full h-full p-6 md:p-12 flex justify-between items-center transition-all duration-300" :class="[isScrolled ? 'py-4 md:py-6' : '']">
       <!-- Top-left Brand Mark -->
       <div class="pointer-events-auto flex items-center h-10">
          <!-- Aligned with sidebar width (typically 32px/w-8 centered in w-32 sidebar) -->
-        <span class="text-celadon font-serif text-2xl font-bold tracking-tight">V.</span>
+        <span 
+          @click="scrollToSection('hero')" 
+          class="text-celadon font-serif text-2xl font-bold tracking-tight cursor-pointer hover:opacity-80 transition-opacity"
+        >
+          V.
+        </span>
       </div>
 
       <!-- Desktop Navigation (Hidden on Tablet/Mobile) -->

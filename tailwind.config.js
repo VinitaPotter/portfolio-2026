@@ -13,7 +13,7 @@ export default {
                 'soft-gray': 'var(--color-soft-gray)',
             },
             fontFamily: {
-                sans: ['Inter', 'system-ui', 'sans-serif'],
+                sans: ['Poppins', 'sans-serif'],
             },
             container: {
                 center: true,

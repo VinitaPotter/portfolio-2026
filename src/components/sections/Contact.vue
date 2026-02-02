@@ -1,14 +1,17 @@
 <template>
-  <section id="contact" class="py-32 min-h-[60vh] flex flex-col justify-center layout-container">
-    <p class="text-celadon font-medium tracking-widest mb-4">say hello</p>
-    <h2 class="text-4xl md:text-5xl font-bold text-off-white mb-8">Contact</h2>
+  <section id="contact" class="py-16 min-h-[60vh] flex flex-col justify-center layout-container">
+    <div class="flex items-center gap-4 mb-4">
+      <span class="text-xs md:text-sm font-medium tracking-[0.2em] text-celadon uppercase">Say hello</span>
+      <div class="h-px w-32 bg-celadon"></div>
+    </div>
+    <h2 class="text-3xl font-bold text-off-white mb-8">Contact</h2>
     
     <p class="text-xl text-soft-gray max-w-2xl leading-relaxed mb-12">
       I am currently looking for new opportunities and also open to conversations. Whether it’s about a role, a product, or just to connect, feel free to reach out.
     </p>
 
     <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-      <a href="mailto:email@example.com" class="inline-flex items-center px-8 py-4 bg-transparent border border-celadon text-celadon hover:bg-celadon/10 transition-colors font-medium text-sm md:text-base w-full md:w-auto justify-center">
+      <a href="mailto:vinitavkumbhar@gmail.com" class="inline-flex items-center px-8 py-4 bg-transparent border border-celadon text-celadon hover:bg-celadon/10 transition-colors font-medium text-sm md:text-base w-full md:w-auto justify-center">
         Send Email <span class="ml-2">→</span>
       </a>
 

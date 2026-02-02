@@ -22,13 +22,13 @@
         <!-- Label -->
         <div class="flex items-center gap-4 animate-fade-in-up" style="animation-delay: 100ms;">
           <h2 class="text-xs md:text-sm font-medium tracking-[0.2em] text-celadon uppercase">Hello</h2>
-          <div class="h-px w-8 md:w-12 bg-celadon/30"></div>
+          <div class="h-px w-32 bg-celadon"></div>
         </div>
         
         <!-- Primary Headline -->
-        <h1 class="text-5xl md:text-8xl lg:text-9xl font-bold text-off-white leading-[0.9] tracking-tight animate-fade-in-up" style="animation-delay: 200ms;">
-          <span class="block text-3xl md:text-5xl lg:text-6xl font-light text-soft-gray mb-2 md:mb-4">my name is</span>
-          Vinita K.
+        <h1 class="text-4xl md:text-6xl lg:text-8xl font-bold text-off-white leading-[0.9] tracking-tight animate-fade-in-up" style="animation-delay: 200ms;">
+          <p class="text-soft-gray">my name is</p>
+          <p>Vinita Kumbhar</p>
         </h1>
         
         <!-- Supporting Paragraph -->
